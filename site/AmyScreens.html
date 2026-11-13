@@ -38,7 +38,7 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
     <h1 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3.2rem; line-height: 1.05;">Amy, every screen.</h1>
     <p style="margin: 0; font-size: 1.05rem; line-height: 1.8; color: #3E3B66;">Four screens, under a minute: what to begin with and the plating on one screen, then three questions about her. It ends in her First Page of three charms (with the bracelet or necklace, if she chose one). She can change her plating or answers, and grow her First Page into The Chapter (5 charms) and The Story (9), now or later.</p>
   </div>
-  <section style="display: flex; flex-direction: column; gap: 14px;">
+  <section id="y-scr-1" style="display: flex; flex-direction: column; gap: 14px;">
     <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SCREEN 1 · WELCOME</span>
     <div style="border: 1px solid #E6DECF; background: #F8F4EC; padding: 48px 5%; box-shadow: 0 18px 40px rgba(11,10,78,0.06);"><div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center;">
         <div style="flex: 1 1 460px; min-width: 0; aspect-ratio: 4 / 3; background-image:url('../assets/51ec2086b57de9d2570de17d24458f6b.webp');background-size:cover;background-position:center;background-repeat:no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; font-size: 13px; color: #5B5880;"></div>
@@ -47,13 +47,13 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
           <h1 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3.6rem; line-height: 1.02;">Hello, I’m Amy.</h1>
           <p style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.55; color: #3E3B66;">A few quick questions, and I’ll suggest how you might wear Y: which pieces, which finish, where to begin. What it holds stays with you.</p>
           <div style="display: flex; flex-direction: column; gap: 12px; max-width: 420px;">
-            <button type="button" style="background: #0B0A4E; color: #F8F4EC; border: 0; padding: 18px; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.18em; cursor: pointer;">FOR ME</button>
-            <button type="button" style="background: transparent; color: #0B0A4E; border: 1px solid #0B0A4E; padding: 17px; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.18em; cursor: pointer;">FOR SOMEONE I’M GIVING TO</button>
+            <button type="button" onclick="yAmyStart(false)" style="background: #0B0A4E; color: #F8F4EC; border: 0; padding: 18px; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.18em; cursor: pointer;">FOR ME</button>
+            <button type="button" onclick="yAmyStart(true)" style="background: transparent; color: #0B0A4E; border: 1px solid #0B0A4E; padding: 17px; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.18em; cursor: pointer;">FOR SOMEONE I’M GIVING TO</button>
           </div>
           <span style="font-size: 13px; color: #5E5B86;">About a minute · nothing to sign up for</span>
         </div>
       </div></div>
-  </section><section style="display: flex; flex-direction: column; gap: 14px;">
+  </section><section id="y-scr-2" style="display: flex; flex-direction: column; gap: 14px;">
     <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SCREEN 2 · WHAT TO BEGIN WITH, AND THE PLATING, ON ONE SCREEN (example: a necklace, 18k Rose Gold-plated)</span>
     <div style="border: 1px solid #E6DECF; background: #F8F4EC; padding: 48px 5%; box-shadow: 0 18px 40px rgba(11,10,78,0.06);"><div style="display: flex; flex-direction: column; gap: 22px; max-width: 760px;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px;">
@@ -61,84 +61,84 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
           <div style="flex: 0 0 160px; height: 2px; background: #E6DECF;"><div style="width: 25%; height: 2px; background: #0B0A4E;"></div></div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 12px;">
-          <span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.6rem; line-height: 1.2;">What would you like to begin with?</span>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;"><button type="button" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">A bracelet</button><button type="button" style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">A necklace</button><button type="button" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">Charms, for a bracelet or necklace I already have</button></div>
+          <span id="y-scr2-piece-label" style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.6rem; line-height: 1.2;">What would you like to begin with?</span>
+          <div id="y-scr2-piece-group" style="display: flex; flex-wrap: wrap; gap: 8px;"><button type="button" onclick="yAmyPick(this,'piece','bracelet')" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">A bracelet</button><button type="button" onclick="yAmyPick(this,'piece','necklace')" style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">A necklace</button><button type="button" onclick="yAmyPick(this,'piece','charms')" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">Charms, for a bracelet or necklace I already have</button></div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 12px;">
           <span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.6rem; line-height: 1.2;">Which plating would you like?</span>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;"><button type="button" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">Silver</button><button type="button" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">18k Gold-plated</button><button type="button" style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">18k Rose Gold-plated</button></div>
+          <div id="y-scr2-plating-group" style="display: flex; flex-wrap: wrap; gap: 8px;"><button type="button" onclick="yAmyPick(this,'plating','silver')" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">Silver</button><button type="button" onclick="yAmyPick(this,'plating','gold')" style="background: #FBF8F2; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">18k Gold-plated</button><button type="button" onclick="yAmyPick(this,'plating','rose')" style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 8px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 14px; line-height: 1.3;">18k Rose Gold-plated</button></div>
           <span style="font-size: 12.5px; line-height: 1.6; color: #5E5B86;">All of Y is 925 recycled silver: Silver with 2-micron rhodium; Gold-plated and Rose Gold-plated with 2-micron 18k plating; all with an anti-tarnish coating.</span>
         </div>
         <span style="font-size: 13px; line-height: 1.6; color: #5E5B86;"><b>For someone else:</b> “What would you like to give her?” (charms for one <i>she</i> already has) and “Which plating would she like?” If she already wears Y, choose the plating of the piece she has.</span>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px; color: #5E5B86;">
-          <button type="button" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button>
-          <span style="display: flex; align-items: center; gap: 14px;">Then three questions about you.<button type="button" style="background: #0B0A4E; color: #F8F4EC; border: 0; padding: 12px 22px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 12px; letter-spacing: 0.16em;">CONTINUE →</button></span>
+          <button type="button" onclick="yAmyGoto(1)" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button>
+          <span id="y-scr2-continue-label" style="display: flex; align-items: center; gap: 14px;">Then three questions about you.<button type="button" onclick="yAmyGoto(3)" style="background: #0B0A4E; color: #F8F4EC; border: 0; padding: 12px 22px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 12px; letter-spacing: 0.16em;">CONTINUE →</button></span>
         </div>
       </div></div>
-  </section><section style="display: flex; flex-direction: column; gap: 14px;">
+  </section><section id="y-scr-3" style="display: flex; flex-direction: column; gap: 14px;">
     <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SCREEN 3 · E / I · 2 OF 4</span>
     <div style="border: 1px solid #E6DECF; background: #F8F4EC; padding: 48px 5%; box-shadow: 0 18px 40px rgba(11,10,78,0.06);"><div style="display: flex; flex-direction: column; gap: 28px;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px;">
           <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">AMY · 2 OF 4</span>
           <div style="flex: 0 0 220px; height: 2px; background: #E6DECF;"><div style="width: 50%; height: 2px; background: #0B0A4E;"></div></div>
         </div>
-        <h1 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3rem; line-height: 1.1; max-width: 820px;">A free evening. Where are you?</h1>
+        <h1 id="y-scr3-h1" style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3rem; line-height: 1.1; max-width: 820px;">A free evening. Where are you?</h1>
         <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-          <button type="button" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
+          <button type="button" onclick="yAmyAnswer('ei','A',4)" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
             <span style="aspect-ratio: 4 / 5; width: 100%; background-image:url('../assets/3b4867ed7ef47254abbddbf592dfc85c.webp');background-size:cover;background-position:center;background-repeat:no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; font-size: 13px; color: #5B5880;"></span>
             <span style="padding: 20px 22px 24px; display: flex; gap: 14px; align-items: baseline;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">A</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.3;">Around a full table, everyone talking</span></span>
           </button>
-          <button type="button" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
+          <button type="button" onclick="yAmyAnswer('ei','B',4)" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
             <span style="aspect-ratio: 4 / 5; width: 100%; background-image:url('../assets/2f392214aa2a6ddab3e26158f76e6fd5.jpg');background-size:cover;background-position:center;background-repeat:no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; font-size: 13px; color: #5B5880;"></span>
             <span style="padding: 20px 22px 24px; display: flex; gap: 14px; align-items: baseline;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">B</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.3;">Somewhere quiet, with one person or none</span></span>
           </button>
         </div>
-        <div style="border: 1px dashed #9C98B8; background: #FBF8F2; padding: 18px 22px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">THE SAME QUESTION, WHEN SHE’S CHOOSING FOR SOMEONE ELSE</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem;">Picture her on a free evening. Where is she?</span><span><b>A</b> · At the centre of a full table, everyone talking</span><span><b>B</b> · Somewhere quiet, with a book or one close friend</span></div>
-        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5E5B86;"><button type="button" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button><span>There are no wrong answers. Go with your first instinct.</span></div>
+        <div id="y-scr3-giftnote" style="display: none; border: 1px dashed #9C98B8; background: #FBF8F2; padding: 18px 22px; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">THE SAME QUESTION, WHEN SHE’S CHOOSING FOR SOMEONE ELSE</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem;">Picture her on a free evening. Where is she?</span><span><b>A</b> · At the centre of a full table, everyone talking</span><span><b>B</b> · Somewhere quiet, with a book or one close friend</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5E5B86;"><button type="button" onclick="yAmyGoto(2)" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button><span>There are no wrong answers. Go with your first instinct.</span></div>
       </div></div>
-  </section><section style="display: flex; flex-direction: column; gap: 14px;">
+  </section><section id="y-scr-4" style="display: flex; flex-direction: column; gap: 14px;">
     <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SCREEN 4 · S / N · 3 OF 4</span>
     <div style="border: 1px solid #E6DECF; background: #F8F4EC; padding: 48px 5%; box-shadow: 0 18px 40px rgba(11,10,78,0.06);"><div style="display: flex; flex-direction: column; gap: 28px;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px;">
           <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">AMY · 3 OF 4</span>
           <div style="flex: 0 0 220px; height: 2px; background: #E6DECF;"><div style="width: 75%; height: 2px; background: #0B0A4E;"></div></div>
         </div>
-        <h1 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3rem; line-height: 1.1; max-width: 820px;">On a long drive, where is your mind?</h1>
+        <h1 id="y-scr4-h1" style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3rem; line-height: 1.1; max-width: 820px;">On a long drive, where is your mind?</h1>
         <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-          <button type="button" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
+          <button type="button" onclick="yAmyAnswer('sn','A',5)" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
             <span style="aspect-ratio: 4 / 5; width: 100%; background-image:url('../assets/9b57b4f5caec6eaed1c2e7a47dd5db2f.jpg');background-size:cover;background-position:center;background-repeat:no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; font-size: 13px; color: #5B5880;"></span>
             <span style="padding: 20px 22px 24px; display: flex; gap: 14px; align-items: baseline;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">A</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.3;">On what’s around me: the road, the view, the music</span></span>
           </button>
-          <button type="button" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
+          <button type="button" onclick="yAmyAnswer('sn','B',5)" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
             <span style="aspect-ratio: 4 / 5; width: 100%; background-image:url('../assets/37031da5f3c9ed244147c35b87170eb9.jpg');background-size:cover;background-position:center;background-repeat:no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; font-size: 13px; color: #5B5880;"></span>
             <span style="padding: 20px 22px 24px; display: flex; gap: 14px; align-items: baseline;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">B</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.3;">Somewhere else entirely: ideas, plans, what-ifs</span></span>
           </button>
         </div>
-        <div style="border: 1px dashed #9C98B8; background: #FBF8F2; padding: 18px 22px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">THE SAME QUESTION, WHEN SHE’S CHOOSING FOR SOMEONE ELSE</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem;">On a long drive, where is her mind?</span><span><b>A</b> · On what’s around her: the road, the view, the music</span><span><b>B</b> · Somewhere else entirely: ideas, plans, what-ifs</span></div>
-        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5E5B86;"><button type="button" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button><span>There are no wrong answers. Go with your first instinct.</span></div>
+        <div id="y-scr4-giftnote" style="display: none; border: 1px dashed #9C98B8; background: #FBF8F2; padding: 18px 22px; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">THE SAME QUESTION, WHEN SHE’S CHOOSING FOR SOMEONE ELSE</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem;">On a long drive, where is her mind?</span><span><b>A</b> · On what’s around her: the road, the view, the music</span><span><b>B</b> · Somewhere else entirely: ideas, plans, what-ifs</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5E5B86;"><button type="button" onclick="yAmyGoto(3)" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button><span>There are no wrong answers. Go with your first instinct.</span></div>
       </div></div>
-  </section><section style="display: flex; flex-direction: column; gap: 14px;">
+  </section><section id="y-scr-5" style="display: flex; flex-direction: column; gap: 14px;">
     <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SCREEN 5 · T / F · 4 OF 4</span>
     <div style="border: 1px solid #E6DECF; background: #F8F4EC; padding: 48px 5%; box-shadow: 0 18px 40px rgba(11,10,78,0.06);"><div style="display: flex; flex-direction: column; gap: 28px;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px;">
           <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">AMY · 4 OF 4</span>
           <div style="flex: 0 0 220px; height: 2px; background: #E6DECF;"><div style="width: 100%; height: 2px; background: #0B0A4E;"></div></div>
         </div>
-        <h1 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3rem; line-height: 1.1; max-width: 820px;">A friend comes to you with a problem. You…</h1>
+        <h1 id="y-scr5-h1" style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3rem; line-height: 1.1; max-width: 820px;">A friend comes to you with a problem. You…</h1>
         <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-          <button type="button" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
+          <button type="button" onclick="yAmyAnswer('tf','A',6)" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
             <span style="aspect-ratio: 4 / 5; width: 100%; background-image:url('../assets/b0f34e8ec934fe81be0eb129a2b1c438.jpg');background-size:cover;background-position:center;background-repeat:no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; font-size: 13px; color: #5B5880;"></span>
             <span style="padding: 20px 22px 24px; display: flex; gap: 14px; align-items: baseline;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">A</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.3;">Help her think it through, clearly and honestly</span></span>
           </button>
-          <button type="button" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
+          <button type="button" onclick="yAmyAnswer('tf','B',6)" style="flex: 1 1 300px; min-width: 0; text-align: left; cursor: pointer; border: 1px solid #E6DECF; background: #FBF8F2; padding: 0; font-family: 'Karla', sans-serif; color: #0B0A4E; display: flex; flex-direction: column;">
             <span style="aspect-ratio: 4 / 5; width: 100%; background-image:url('../assets/345fcaa892522b2076416807afa63a0e.jpg');background-size:cover;background-position:center;background-repeat:no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; box-sizing: border-box; font-size: 13px; color: #5B5880;"></span>
             <span style="padding: 20px 22px 24px; display: flex; gap: 14px; align-items: baseline;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">B</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.3;">Listen first, and make sure she feels heard</span></span>
           </button>
         </div>
-        <div style="border: 1px dashed #9C98B8; background: #FBF8F2; padding: 18px 22px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">THE SAME QUESTION, WHEN SHE’S CHOOSING FOR SOMEONE ELSE</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem;">A friend comes to her with a problem. She…</span><span><b>A</b> · Helps her think it through, clearly and honestly</span><span><b>B</b> · Listens first, and makes sure she feels heard</span></div>
-        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5E5B86;"><button type="button" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button><span>There are no wrong answers. Go with your first instinct.</span></div>
+        <div id="y-scr5-giftnote" style="display: none; border: 1px dashed #9C98B8; background: #FBF8F2; padding: 18px 22px; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">THE SAME QUESTION, WHEN SHE’S CHOOSING FOR SOMEONE ELSE</span><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem;">A friend comes to her with a problem. She…</span><span><b>A</b> · Helps her think it through, clearly and honestly</span><span><b>B</b> · Listens first, and makes sure she feels heard</span></div>
+        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #5E5B86;"><button type="button" onclick="yAmyGoto(4)" style="background: transparent; border: 0; padding: 8px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E;">← BACK</button><span>There are no wrong answers. Go with your first instinct.</span></div>
       </div></div>
-  </section><section style="display: flex; flex-direction: column; gap: 14px;">
+  </section><section id="y-scr-6" style="display: flex; flex-direction: column; gap: 14px;">
     <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SCREEN 6 · HER FIRST PAGE (shows the bracelet or necklace she chose, with its sizes; if she chose charms only, this row is hidden)</span>
     <div style="border: 1px solid #E6DECF; background: #F8F4EC; padding: 48px 5%; box-shadow: 0 18px 40px rgba(11,10,78,0.06);"><div style="display: flex; flex-direction: column; gap: 40px;">
         <div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px;">
@@ -146,11 +146,11 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;">
           <span style="font-size: 13px; color: #5E5B86; margin-right: 6px;">Tap to change:</span>
-          <button type="button" aria-label="Switch between Quiet corner and Full table" style="background: transparent; border: 0; padding: 0; cursor: pointer; display: flex; font-family: 'Karla', sans-serif; font-size: 13px;"><span style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px;">Quiet corner</span><span style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px;">Full table</span></button>
-          <button type="button" aria-label="Switch between Here and now and What-ifs" style="background: transparent; border: 0; padding: 0; cursor: pointer; display: flex; font-family: 'Karla', sans-serif; font-size: 13px;"><span style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px;">Here and now</span><span style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px;">What-ifs</span></button>
-          <button type="button" aria-label="Switch between Clear head and Open heart" style="background: transparent; border: 0; padding: 0; cursor: pointer; display: flex; font-family: 'Karla', sans-serif; font-size: 13px;"><span style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px;">Clear head</span><span style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px;">Open heart</span></button>
+          <button type="button" onclick="yAmyToggleSpan(this)" aria-label="Switch between Quiet corner and Full table" style="background: transparent; border: 0; padding: 0; cursor: pointer; display: flex; font-family: 'Karla', sans-serif; font-size: 13px;"><span style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px;">Quiet corner</span><span style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px;">Full table</span></button>
+          <button type="button" onclick="yAmyToggleSpan(this)" aria-label="Switch between Here and now and What-ifs" style="background: transparent; border: 0; padding: 0; cursor: pointer; display: flex; font-family: 'Karla', sans-serif; font-size: 13px;"><span style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px;">Here and now</span><span style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px;">What-ifs</span></button>
+          <button type="button" onclick="yAmyToggleSpan(this)" aria-label="Switch between Clear head and Open heart" style="background: transparent; border: 0; padding: 0; cursor: pointer; display: flex; font-family: 'Karla', sans-serif; font-size: 13px;"><span style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px;">Clear head</span><span style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px;">Open heart</span></button>
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;"><span style="font-size: 13px; color: #5E5B86; margin-right: 6px;">Plating:</span><div style="display: flex; flex-wrap: wrap;"><button type="button" style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px;">Silver</button><button type="button" style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px;">18k Gold-plated</button><button type="button" style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px;">18k Rose Gold-plated</button></div></div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;"><span style="font-size: 13px; color: #5E5B86; margin-right: 6px;">Plating:</span><div id="y-scr6-plating-group" style="display: flex; flex-wrap: wrap;"><button type="button" onclick="yAmyPick(this,'plating','silver')" style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px;">Silver</button><button type="button" onclick="yAmyPick(this,'plating','gold')" style="background: transparent; color: #0B0A4E; border: 1px solid #C9BFAE; padding: 10px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px;">18k Gold-plated</button><button type="button" onclick="yAmyPick(this,'plating','rose')" style="background: #0B0A4E; color: #F8F4EC; border: 1px solid #0B0A4E; padding: 10px 14px; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px;">18k Rose Gold-plated</button></div></div>
         <div style="display: flex; flex-direction: column; gap: 20px; background: #FBF8F2; border: 1px solid #E6DECF; padding: 30px 30px 26px;">
           <div style="display: flex; flex-direction: column; gap: 6px;">
             <span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.1rem; line-height: 1.1;">This is your First Page.</span>
@@ -181,8 +181,72 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
         </div>
         
         <p style="margin: 0; text-align: center; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; font-size: 1rem; color: #5E5B86;">Amy suggests three charms to begin with. What a charm holds is yours to decide.</p>
+        <button type="button" onclick="yAmyGoto(1)" style="align-self: center; background: transparent; border: 0; padding: 4px 0; cursor: pointer; font-family: 'Karla', sans-serif; font-size: 13px; letter-spacing: 0.14em; color: #0B0A4E; text-decoration: underline; text-underline-offset: 4px;">START OVER</button>
       </div></div>
   </section>
+  <script>
+  (function(){
+    var SELECTED = { background: '#0B0A4E', color: '#F8F4EC', borderColor: '#0B0A4E' };
+    var UNSELECTED = { background: '#FBF8F2', color: '#0B0A4E', borderColor: '#C9BFAE' };
+
+    var state = { gift: false, piece: 'necklace', plating: 'rose', ei: null, sn: null, tf: null };
+
+    window.yAmyGoto = function(n){
+      for (var i = 1; i <= 6; i++) {
+        var el = document.getElementById('y-scr-' + i);
+        if (el) el.style.display = (i === n) ? 'flex' : 'none';
+      }
+      window.scrollTo({ top: document.getElementById('y-scr-' + n).getBoundingClientRect().top + window.scrollY - 24, behavior: 'smooth' });
+    };
+
+    window.yAmyStart = function(gift){
+      state.gift = gift;
+      var pieceLabel = document.getElementById('y-scr2-piece-label');
+      if (pieceLabel) pieceLabel.textContent = gift ? 'What would you like to give her?' : 'What would you like to begin with?';
+      ['y-scr3-giftnote','y-scr4-giftnote','y-scr5-giftnote'].forEach(function(id){
+        var box = document.getElementById(id);
+        if (box) box.style.display = 'none';
+      });
+      var h3 = document.getElementById('y-scr3-h1');
+      var h4 = document.getElementById('y-scr4-h1');
+      var h5 = document.getElementById('y-scr5-h1');
+      if (h3) h3.textContent = gift ? 'Picture her on a free evening. Where is she?' : 'A free evening. Where are you?';
+      if (h4) h4.textContent = gift ? 'On a long drive, where is her mind?' : 'On a long drive, where is your mind?';
+      if (h5) h5.textContent = gift ? 'A friend comes to her with a problem. She…' : 'A friend comes to you with a problem. You…';
+      yAmyGoto(2);
+    };
+
+    window.yAmyPick = function(btn, group, val){
+      state[group] = val;
+      var siblings = btn.parentElement.querySelectorAll('button');
+      siblings.forEach(function(b){
+        var s = (b === btn) ? SELECTED : UNSELECTED;
+        b.style.background = s.background;
+        b.style.color = s.color;
+        b.style.borderColor = s.borderColor;
+      });
+    };
+
+    window.yAmyAnswer = function(q, val, nextScreen){
+      state[q] = val;
+      yAmyGoto(nextScreen);
+    };
+
+    window.yAmyToggleSpan = function(btn){
+      var spans = btn.querySelectorAll('span');
+      spans.forEach(function(s){
+        var isNowSelected = s.style.background !== 'rgb(11, 10, 78)' && s.style.background !== '#0B0A4E';
+        if (isNowSelected) {
+          s.style.background = '#0B0A4E'; s.style.color = '#F8F4EC'; s.style.borderColor = '#0B0A4E';
+        } else {
+          s.style.background = 'transparent'; s.style.color = '#0B0A4E'; s.style.borderColor = '#C9BFAE';
+        }
+      });
+    };
+
+    yAmyGoto(1);
+  })();
+  </script>
 </div>
 
 </body>
