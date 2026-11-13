@@ -1,0 +1,551 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Amy.dc.html": {
+      "expand": "fill",
+      "h": 1300,
+      "is_interactive": true,
+      "title": "Amy: a few questions (press Play)",
+      "w": 1440,
+      "x": 29600,
+      "y": 0
+    },
+    "AmyFlow.dc.html": {
+      "h": 1460,
+      "title": "Amy: the flow",
+      "w": 2560,
+      "x": 32640,
+      "y": 0
+    },
+    "AmyGift.dc.html": {
+      "h": 2900,
+      "title": "Amy for someone else: gift mode on a phone",
+      "w": 1440,
+      "x": 75120,
+      "y": 0
+    },
+    "AmyPhone.dc.html": {
+      "h": 1060,
+      "title": "Amy on a phone",
+      "w": 1520,
+      "x": 35280,
+      "y": 0
+    },
+    "AmyScreens.dc.html": {
+      "h": 7400,
+      "title": "Amy: every screen",
+      "w": 1440,
+      "x": 31120,
+      "y": 0
+    },
+    "AsIs.dc.html": {
+      "expand": "fill",
+      "h": 3970,
+      "is_interactive": true,
+      "title": "Just as it is: sets sold whole, no swaps",
+      "w": 1440,
+      "x": 70560,
+      "y": 0
+    },
+    "AsIsSet.dc.html": {
+      "expand": "fill",
+      "h": 3100,
+      "is_interactive": true,
+      "title": "Just as it is: one set, add to bag",
+      "w": 1440,
+      "x": 72080,
+      "y": 0
+    },
+    "BISHallmark.dc.html": {
+      "expand": "fill",
+      "h": 3650,
+      "is_interactive": true,
+      "title": "BIS hallmarked",
+      "w": 1440,
+      "x": 44480,
+      "y": 0
+    },
+    "Bag.dc.html": {
+      "expand": "fill",
+      "h": 1980,
+      "is_interactive": true,
+      "title": "Your bag",
+      "w": 1440,
+      "x": 15920,
+      "y": 0
+    },
+    "BookCall.dc.html": {
+      "expand": "fill",
+      "h": 2340,
+      "is_interactive": true,
+      "title": "Book a call (press Play)",
+      "w": 1440,
+      "x": 28080,
+      "y": 0
+    },
+    "Bracelets.dc.html": {
+      "expand": "fill",
+      "h": 2100,
+      "is_interactive": true,
+      "title": "Bracelets",
+      "w": 1440,
+      "x": 14400,
+      "y": 0
+    },
+    "Builder.dc.html": {
+      "expand": "fill",
+      "h": 1900,
+      "title": "Build Yours: add to the bracelet or necklace you own",
+      "w": 1440,
+      "x": 11360,
+      "y": 0
+    },
+    "CareGuide.dc.html": {
+      "expand": "fill",
+      "h": 3280,
+      "is_interactive": true,
+      "title": "Care guide and finishes",
+      "w": 1440,
+      "x": 20480,
+      "y": 0
+    },
+    "Charms.dc.html": {
+      "expand": "fill",
+      "h": 3020,
+      "is_interactive": true,
+      "title": "Charms",
+      "w": 1440,
+      "x": 12880,
+      "y": 0
+    },
+    "Checkout.dc.html": {
+      "expand": "fill",
+      "h": 1930,
+      "is_interactive": true,
+      "title": "Checkout: keep this moment",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "CreatedByMonika.dc.html": {
+      "expand": "fill",
+      "h": 4000,
+      "is_interactive": true,
+      "title": "Created by Monika",
+      "w": 1440,
+      "x": 39920,
+      "y": 0
+    },
+    "DeliveryReturns.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "is_interactive": true,
+      "title": "Delivery & returns",
+      "w": 1440,
+      "x": 38400,
+      "y": 0
+    },
+    "EarthPoints.dc.html": {
+      "expand": "fill",
+      "h": 3800,
+      "is_interactive": true,
+      "title": "Earth Points: automatic, no sign-in",
+      "w": 1440,
+      "x": 22000,
+      "y": 0
+    },
+    "FAQ.dc.html": {
+      "expand": "fill",
+      "h": 5110,
+      "is_interactive": true,
+      "title": "FAQs",
+      "w": 1440,
+      "x": 26560,
+      "y": 0
+    },
+    "Gift.dc.html": {
+      "expand": "fill",
+      "h": 3840,
+      "is_interactive": true,
+      "title": "Gifts",
+      "w": 1440,
+      "x": 6800,
+      "y": 0
+    },
+    "GiftNote.dc.html": {
+      "expand": "fill",
+      "h": 3070,
+      "is_interactive": true,
+      "title": "Gift note: free printed note, or the Y gift box",
+      "w": 1440,
+      "x": 73600,
+      "y": 0
+    },
+    "HandFinished.dc.html": {
+      "expand": "fill",
+      "h": 4100,
+      "is_interactive": true,
+      "title": "Hand-finished",
+      "w": 1440,
+      "x": 41440,
+      "y": 0
+    },
+    "InTheirWords.dc.html": {
+      "expand": "fill",
+      "h": 2980,
+      "is_interactive": true,
+      "title": "In their words",
+      "w": 1440,
+      "x": 52080,
+      "y": 0
+    },
+    "Landing.dc.html": {
+      "expand": "fill",
+      "h": 7340,
+      "is_interactive": true,
+      "title": "Landing page (laptop)",
+      "w": 1440,
+      "x": 65760,
+      "y": 0
+    },
+    "LandingDevices.dc.html": {
+      "h": 3900,
+      "title": "Landing page: laptop and phone",
+      "w": 3200,
+      "x": 67280,
+      "y": 0
+    },
+    "LetterBack.dc.html": {
+      "h": 1100,
+      "title": "Email: a year later",
+      "w": 640,
+      "x": 4560,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 7223,
+      "is_interactive": true,
+      "title": "Homepage",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "MainMobile.dc.html": {
+      "expand": "fill",
+      "h": 7286,
+      "is_interactive": true,
+      "title": "Homepage (mobile)",
+      "w": 390,
+      "x": -548,
+      "y": 0
+    },
+    "MainMobile2.dc.html": {
+      "expand": "fill",
+      "h": 3748,
+      "is_interactive": true,
+      "title": "Homepage (mobile), part 2",
+      "w": 390,
+      "x": -1018,
+      "y": 0
+    },
+    "Menus.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "Menus: all ten dropdowns",
+      "w": 1440,
+      "x": 9840,
+      "y": 0
+    },
+    "MonikaNote.dc.html": {
+      "expand": "fill",
+      "h": 3900,
+      "is_interactive": true,
+      "title": "A note from Monika",
+      "w": 1440,
+      "x": 25040,
+      "y": 0
+    },
+    "MonikaNotes.dc.html": {
+      "expand": "fill",
+      "h": 5850,
+      "is_interactive": true,
+      "title": "Notes from Monika: No. 04 to 08",
+      "w": 1440,
+      "x": 47520,
+      "y": 0
+    },
+    "MonikaStories.dc.html": {
+      "expand": "fill",
+      "h": 6740,
+      "is_interactive": true,
+      "title": "Notes from Monika: stories",
+      "w": 1440,
+      "x": 56640,
+      "y": 0
+    },
+    "Moodboard.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "The Unsaid: imagery, website and casting moodboard",
+      "w": 1440,
+      "x": 61200,
+      "y": 0
+    },
+    "Necklaces.dc.html": {
+      "expand": "fill",
+      "h": 3110,
+      "is_interactive": true,
+      "title": "Necklaces",
+      "w": 1440,
+      "x": 17440,
+      "y": 0
+    },
+    "Packaging.dc.html": {
+      "expand": "fill",
+      "h": 7360,
+      "is_interactive": true,
+      "title": "Packaging: 100% recyclable, reusable",
+      "w": 1440,
+      "x": 36880,
+      "y": 0
+    },
+    "Piece-qe9n.dc.html": {
+      "frameless": true,
+      "h": 1123,
+      "title": "Box",
+      "w": 1440,
+      "x": 1618,
+      "y": 5676
+    },
+    "Product.dc.html": {
+      "expand": "fill",
+      "h": 3490,
+      "is_interactive": true,
+      "title": "Product page",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "ReadyToWear.dc.html": {
+      "expand": "fill",
+      "h": 4050,
+      "is_interactive": true,
+      "title": "Ready-to-Wear Sets: sold as is, always growing",
+      "w": 1440,
+      "x": 8320,
+      "y": 0
+    },
+    "RecycledSilver.dc.html": {
+      "expand": "fill",
+      "h": 2900,
+      "is_interactive": true,
+      "title": "100% recycled 925 silver",
+      "w": 1440,
+      "x": 42960,
+      "y": 0
+    },
+    "Scratch.dc.html": {
+      "expand": "fill",
+      "h": 1500,
+      "is_interactive": true,
+      "title": "Build Yours: from scratch",
+      "w": 1440,
+      "x": 76640,
+      "y": 0
+    },
+    "Search.dc.html": {
+      "expand": "fill",
+      "h": 2050,
+      "is_interactive": true,
+      "title": "Search results",
+      "w": 1440,
+      "x": 59680,
+      "y": 0
+    },
+    "SetSoldOut.dc.html": {
+      "expand": "fill",
+      "h": 3600,
+      "title": "Ready to Wear: when a charm sells out",
+      "w": 1440,
+      "x": 62720,
+      "y": 0
+    },
+    "SetSwap.dc.html": {
+      "expand": "fill",
+      "h": 1520,
+      "is_interactive": true,
+      "title": "Ready to Wear: when a charm is sold out",
+      "w": 1440,
+      "x": 78160,
+      "y": 0
+    },
+    "Sets.dc.html": {
+      "expand": "fill",
+      "h": 2160,
+      "is_interactive": true,
+      "title": "Ready to Wear set: one set, marked as what it is",
+      "w": 1440,
+      "x": 5280,
+      "y": 0
+    },
+    "ShareYourStory.dc.html": {
+      "expand": "fill",
+      "h": 2810,
+      "is_interactive": true,
+      "title": "Share your story",
+      "w": 1440,
+      "x": 53600,
+      "y": 0
+    },
+    "SignIn.dc.html": {
+      "expand": "fill",
+      "h": 4580,
+      "is_interactive": true,
+      "title": "Signing in: where and when we ask",
+      "w": 1440,
+      "x": 58160,
+      "y": 0
+    },
+    "SizeGuide.dc.html": {
+      "expand": "fill",
+      "h": 3080,
+      "is_interactive": true,
+      "title": "Size guide: bracelet and necklace",
+      "w": 1440,
+      "x": 18960,
+      "y": 0
+    },
+    "StoryCircle.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "The Story Circle",
+      "w": 1440,
+      "x": 55120,
+      "y": 0
+    },
+    "Studio.dc.html": {
+      "expand": "fill",
+      "h": 3350,
+      "is_interactive": true,
+      "title": "The Studio: how it's made, made to keep",
+      "w": 1440,
+      "x": 23520,
+      "y": 0
+    },
+    "ToneTest.dc.html": {
+      "expand": "fill",
+      "h": 4420,
+      "is_interactive": true,
+      "title": "Lighter sand and borders: now and proposed",
+      "w": 1440,
+      "x": 64240,
+      "y": 0
+    },
+    "YJourney.dc.html": {
+      "expand": "fill",
+      "h": 4300,
+      "is_interactive": true,
+      "title": "The Y Journey",
+      "w": 1440,
+      "x": 49040,
+      "y": 0
+    },
+    "YPhilosophy.dc.html": {
+      "expand": "fill",
+      "h": 2300,
+      "is_interactive": true,
+      "title": "The Y Philosophy",
+      "w": 1440,
+      "x": 50560,
+      "y": 0
+    },
+    "YourStory.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Your Story: the whole account",
+      "w": 1440,
+      "x": 46000,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-22T09:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "t1": {
+      "kind": "title1",
+      "maxW": 5200,
+      "text": "Y Jewelry: Her Story direction",
+      "w": 240,
+      "x": 0,
+      "y": -260
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "MainMobile.dc.html",
+    "MainMobile2.dc.html",
+    "Product.dc.html",
+    "Checkout.dc.html",
+    "LetterBack.dc.html",
+    "Sets.dc.html",
+    "Gift.dc.html",
+    "ReadyToWear.dc.html",
+    "Menus.dc.html",
+    "Builder.dc.html",
+    "Studio.dc.html",
+    "Necklaces.dc.html",
+    "SizeGuide.dc.html",
+    "CareGuide.dc.html",
+    "EarthPoints.dc.html",
+    "Amy.dc.html",
+    "AmyScreens.dc.html",
+    "AmyFlow.dc.html",
+    "AmyPhone.dc.html",
+    "Charms.dc.html",
+    "Bracelets.dc.html",
+    "Bag.dc.html",
+    "MonikaNote.dc.html",
+    "FAQ.dc.html",
+    "BookCall.dc.html",
+    "Packaging.dc.html",
+    "DeliveryReturns.dc.html",
+    "CreatedByMonika.dc.html",
+    "HandFinished.dc.html",
+    "RecycledSilver.dc.html",
+    "BISHallmark.dc.html",
+    "YourStory.dc.html",
+    "MonikaNotes.dc.html",
+    "YJourney.dc.html",
+    "YPhilosophy.dc.html",
+    "InTheirWords.dc.html",
+    "ShareYourStory.dc.html",
+    "StoryCircle.dc.html",
+    "MonikaStories.dc.html",
+    "SignIn.dc.html",
+    "Search.dc.html",
+    "Moodboard.dc.html",
+    "SetSoldOut.dc.html",
+    "ToneTest.dc.html",
+    "Landing.dc.html",
+    "LandingDevices.dc.html",
+    "AsIs.dc.html",
+    "AsIsSet.dc.html",
+    "GiftNote.dc.html",
+    "AmyGift.dc.html",
+    "Scratch.dc.html",
+    "SetSwap.dc.html",
+    "Piece-qe9n.dc.html"
+  ],
+  "pages": [],
+  "title": "Y Story Website Direction"
+}
