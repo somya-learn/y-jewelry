@@ -26,6 +26,8 @@ nav[aria-label="Breadcrumb"]{align-items:center}
  h2{font-size:2rem!important}
  footer a{display:inline-block;padding:8px 0}
  .y-sticky{display:flex!important}
+ .y-story-wrap{flex-direction:column!important;align-items:stretch!important;padding:0 5% 48px!important;gap:20px!important}
+ .y-story-sidenav{position:static!important;top:auto!important}
  body{padding-bottom:76px}
  header{padding:0 20px!important;column-gap:8px!important}
  header nav{gap:0 8px!important}
@@ -277,25 +279,27 @@ nav[aria-label="Breadcrumb"]{align-items:center}
     <span style="font-size: 12px; letter-spacing: 0.25em; color: #5E5B86;">YOUR STORY</span>
     <h1 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 3.2rem; line-height: 1.05;">Hello, [Ananya].</h1>
     <p style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.3rem; line-height: 1.6; color: #3E3B66; max-width: 720px;">Everything you’ve chosen from Y, kept in one place. What it means stays with you.</p>
-    <nav aria-label="Your Story" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-      <a href="#pieces" style="background: #0B0A4E; color: #F8F4EC; padding: 10px 18px; text-decoration: none; font-size: 14px;">Your bracelets &amp; necklaces</a>
-      <a href="#complete" style="border: 1px solid #C9BFAE; padding: 10px 18px; text-decoration: none; font-size: 14px;">Complete your story</a>
-      <a href="#saved" style="border: 1px solid #C9BFAE; padding: 10px 18px; text-decoration: none; font-size: 14px;">Saved builds</a>
-      <a href="#moments" style="border: 1px solid #C9BFAE; padding: 10px 18px; text-decoration: none; font-size: 14px;">Moments you’ve kept</a>
-      <a href="#gifts" style="border: 1px solid #C9BFAE; padding: 10px 18px; text-decoration: none; font-size: 14px;">Gift messages you’ve sent</a>
-      <a href="#orders" style="border: 1px solid #C9BFAE; padding: 10px 18px; text-decoration: none; font-size: 14px;">Orders &amp; tracking</a>
-      <a href="#points" style="border: 1px solid #C9BFAE; padding: 10px 18px; text-decoration: none; font-size: 14px;">Earth Points</a>
-      <a href="#details" style="border: 1px solid #C9BFAE; padding: 10px 18px; text-decoration: none; font-size: 14px;">Details &amp; sign out</a>
-    </nav>
     <div style="display: flex; flex-wrap: wrap; gap: 0 28px; margin-top: 14px;">
-      <a href="#points" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">₹1,200</span><span style="font-size: 13px; color: #5E5B86;">Earth Points, used automatically at checkout</span></a>
-      <a href="#points" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">₹0</span><span style="font-size: 13px; color: #5E5B86;">Y store credit</span></a>
-      <a href="#moments" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">[Her chosen date]</span><span style="font-size: 13px; color: #5E5B86;">Your next kept moment returns</span></a>
-      <a href="#orders" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">1 on its way</span><span style="font-size: 13px; color: #5E5B86;">Orders and tracking</span></a>
+      <a href="#points" onclick="return yStoryTab('points');" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">₹1,200</span><span style="font-size: 13px; color: #5E5B86;">Earth Points, used automatically at checkout</span></a>
+      <a href="#points" onclick="return yStoryTab('points');" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">₹0</span><span style="font-size: 13px; color: #5E5B86;">Y store credit</span></a>
+      <a href="#moments" onclick="return yStoryTab('moments');" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">[Her chosen date]</span><span style="font-size: 13px; color: #5E5B86;">Your next kept moment returns</span></a>
+      <a href="#orders" onclick="return yStoryTab('orders');" style="flex: 1 1 200px; min-width: 0; text-decoration: none; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem; line-height: 1.1;">1 on its way</span><span style="font-size: 13px; color: #5E5B86;">Orders and tracking</span></a>
     </div>
   </section>
-  <section style="background: #FBF8F2; border-top: 1px solid #E6DECF; border-bottom: 1px solid #E6DECF;">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-wrap" style="max-width: 1240px; margin: 0 auto; padding: 0 5% 80px; display: flex; gap: 40px; align-items: flex-start;">
+    <nav aria-label="Your Story" class="y-story-sidenav" style="flex: 0 0 260px; min-width: 0; border: 1px solid #E6DECF; display: flex; flex-direction: column; position: sticky; top: 100px;">
+      <a href="#pieces" class="y-story-nav-item" data-tab="pieces" onclick="return yStoryTab('pieces');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #E6DECF; background: #0B0A4E; color: #F8F4EC;">Your bracelets &amp; necklaces</a>
+      <a href="#complete" class="y-story-nav-item" data-tab="complete" onclick="return yStoryTab('complete');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #E6DECF; color: #0B0A4E;">Complete your story</a>
+      <a href="#saved" class="y-story-nav-item" data-tab="saved" onclick="return yStoryTab('saved');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #E6DECF; color: #0B0A4E;">Saved builds</a>
+      <a href="#moments" class="y-story-nav-item" data-tab="moments" onclick="return yStoryTab('moments');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #E6DECF; color: #0B0A4E;">Moments you’ve kept</a>
+      <a href="#gifts" class="y-story-nav-item" data-tab="gifts" onclick="return yStoryTab('gifts');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #E6DECF; color: #0B0A4E;">Gift messages you’ve sent</a>
+      <a href="#orders" class="y-story-nav-item" data-tab="orders" onclick="return yStoryTab('orders');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #E6DECF; color: #0B0A4E;">Orders &amp; tracking</a>
+      <a href="#points" class="y-story-nav-item" data-tab="points" onclick="return yStoryTab('points');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; border-bottom: 1px solid #E6DECF; color: #0B0A4E;">Earth Points</a>
+      <a href="#details" class="y-story-nav-item" data-tab="details" onclick="return yStoryTab('details');" style="display: block; padding: 16px 20px; text-decoration: none; font-size: 14px; color: #0B0A4E;">Details &amp; sign out</a>
+    </nav>
+    <div class="y-story-content" style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column;">
+  <section class="y-story-panel" data-panel="pieces" style="background: #FBF8F2; border: 1px solid #E6DECF;">
+    <div style="padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
       <div id="pieces" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">YOURS</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Your bracelets &amp; necklaces</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">Every piece you own from Y, with the charms on it and the spaces still open. Pieces bought with your mobile number appear here on their own.</p></div>
       <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">BRACELETS · 2</span>
       <div style="display: flex; flex-wrap: wrap; gap: 24px;"><article style="flex: 1 1 460px; min-width: 0; background: #FBF8F2; border: 1px solid #E6DECF; padding: 28px; display: flex; flex-direction: column; gap: 16px;">
@@ -335,7 +339,7 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       </div>
     </div>
   </section>
-  <section style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-panel" data-panel="complete" data-show="flex" style="display: none; padding: 0 0 64px; flex-direction: column; gap: 28px;">
     <div id="complete" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">COMPLETE YOUR STORY</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Complete your story</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">However you began, there’s room to add to it, whenever you’re ready.</p></div>
     <div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #0B0A4E; padding-top: 18px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.6rem;">You began with a set I made</span><span style="font-size: 14px; color: #3E3B66;">A First Page grows into a Chapter, and a Chapter into a Story. Add any charms you like from the Charms page.</span></div>
     <div style="display: flex; flex-wrap: wrap; gap: 24px;"><article style="flex: 1 1 520px; min-width: 0; background: #FBF8F2; border: 1px solid #E6DECF; padding: 28px; display: flex; flex-direction: column; gap: 16px;">
@@ -377,8 +381,8 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;"><a href="Charms.html" style="background: #0B0A4E; color: #F8F4EC; text-decoration: none; font-size: 13px; letter-spacing: 0.16em; padding: 14px 22px;">FILL AN OPEN SPACE</a><a href="Builder.html" style="border: 1px solid #0B0A4E; text-decoration: none; font-size: 13px; letter-spacing: 0.16em; padding: 13px 21px;">OPEN IN BUILD YOURS</a><a href="#monika-picks" style="font-size: 14px;">See what I’d add</a></div>
     </article></div>
   </section>
-  <section id="monika-picks" style="background: #FBF8F2; border-top: 1px solid #E6DECF; border-bottom: 1px solid #E6DECF; scroll-margin-top: 90px;">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section id="monika-picks" class="y-story-panel" data-panel="complete" style="display: none; background: #FBF8F2; border: 1px solid #E6DECF; scroll-margin-top: 90px;">
+    <div style="padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
       <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between;">
         <div style="display: flex; flex-direction: column; gap: 10px; max-width: 720px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">FROM MONIKA</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">What I’d add to yours</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66;">I look at what you already wear: the finish, the mix of Bead and Dangle charms, and the space left on each piece. What it means is still yours to decide.</p></div>
         <div style="font-family: 'Mrs Saint Delafield', cursive; font-size: 2.4rem; line-height: 1;">Monika</div>
@@ -411,8 +415,8 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       <a href="Charms.html" style="align-self: flex-start; font-size: 14px;">See every charm that fits your pieces</a>
     </div>
   </section>
-  <section>
-    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-panel" data-panel="saved" style="display: none;">
+    <div style="padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
       <div id="saved" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SAVED BUILDS</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Saved builds</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">Bracelets and necklaces you’ve put together in Build Yours, and First Pages you’ve saved from Amy. They wait here until you’re ready.</p></div>
       <div style="display: flex; flex-wrap: wrap; gap: 24px;"><article style="flex: 1 1 300px; min-width: 0; background: #FBF8F2; border: 1px solid #E6DECF; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
       <div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">BRACELET</span><span style="font-size: 12px; color: #5E5B86;">Saved 14 Oct</span></div>
@@ -443,7 +447,7 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       <span style="font-size: 13px; color: #5E5B86;">Nothing saved yet? “Start a bracelet or a necklace in Build Yours and save it here.” START BUILDING</span>
     </div>
   </section>
-  <section style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-panel" data-panel="moments" data-show="flex" style="display: none; padding: 0; flex-direction: column; gap: 28px;">
     <div id="moments" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">KEPT</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Moments you’ve kept</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">A few lines you wrote at checkout, sealed and sent back to you on the day you chose. Until then, no one reads them. Not even us.</p></div>
     <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">SEALED · 2</span>
     <div style="display: flex; flex-wrap: wrap; gap: 24px;"><article style="flex: 1 1 380px; min-width: 0; background: #FBF8F2; border: 1px solid #E6DECF; padding: 28px; display: flex; flex-direction: column; gap: 14px;">
@@ -469,8 +473,8 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       <div style="flex: 1 1 380px; min-width: 0; border: 1px dashed #C9BFAE; padding: 28px; display: flex; flex-direction: column; gap: 10px; justify-content: center;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.5rem; line-height: 1.25;">Keep another moment</span><span style="font-size: 14px; line-height: 1.7; color: #5E5B86;">With any order, at checkout, you can keep a few lines for yourself. Write them, seal them, and choose when they come back: in a year, on your birthday, or on a date that matters to you.</span><a href="Charms.html" style="font-size: 14px;">Find your next piece</a></div>
     </div>
   </section>
-  <section style="background: #FBF8F2; border-top: 1px solid #E6DECF; border-bottom: 1px solid #E6DECF;">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-panel" data-panel="gifts" style="display: none; background: #FBF8F2; border: 1px solid #E6DECF;">
+    <div style="padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
       <div id="gifts" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">GIVEN</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Gift messages you’ve sent</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">Every message you’ve sent with a Y gift, exactly as you wrote it. Prices are never shown here, or to her.</p></div>
       <div style="display: flex; flex-wrap: wrap; gap: 24px;"><article style="flex: 1 1 320px; min-width: 0; background: #FBF8F2; border: 1px solid #E6DECF; padding: 28px; display: flex; flex-direction: column; gap: 14px;">
       <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">TO MEERA</span><span style="font-size: 13px; color: #5E5B86;">Delivered 12 Oct 2026</span></div>
@@ -494,7 +498,7 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       <span style="font-size: 13px; color: #5E5B86;">If she exchanges a gift, you won’t be told. It stays between her and us.</span>
     </div>
   </section>
-  <section style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-panel" data-panel="orders" data-show="flex" style="display: none; padding: 0; flex-direction: column; gap: 28px;">
     <div id="orders" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">ACCOUNT</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Orders &amp; tracking</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">Every order placed with your mobile number, with where it is now and what you can still do.</p></div>
     <div style="display: flex; flex-direction: column; gap: 24px;"><article style="background: #FBF8F2; border: 1px solid #E6DECF; padding: 28px; display: flex; flex-direction: column; gap: 20px;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: baseline;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.6rem;">On its way</span><span style="font-size: 13px; color: #5E5B86;">Order #Y1046 · placed 26 Oct 2026</span></div>
@@ -522,8 +526,8 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       <div style="display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; font-size: 14px; border-top: 1px solid #E6DECF; padding-top: 16px;"><a href="#">Download invoice</a><a href="CareGuide.html">Free cleaning: send it to us</a><a href="Gift.html">Order again</a></div>
     </article></div>
   </section>
-  <section style="background: #FBF8F2; border-top: 1px solid #E6DECF; border-bottom: 1px solid #E6DECF;">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-panel" data-panel="points" style="display: none; background: #FBF8F2; border: 1px solid #E6DECF;">
+    <div style="padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
       <div id="points" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">ACCOUNT</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Earth Points &amp; store credit</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">Your thank-you for choosing recycled silver, and any refund you took as credit. Both live on your mobile number and come off at checkout on their own.</p></div>
       <div style="display: flex; flex-wrap: wrap; gap: 0 28px;">
         <div style="flex: 1 1 220px; min-width: 0; border-top: 1px solid #0B0A4E; padding: 16px 0; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.9rem; line-height: 1.1;">₹1,200</span><span style="font-size: 14px; font-weight: 700;">Ready to use</span><span style="font-size: 13px; color: #5E5B86;">Comes off your next order automatically, up to 10%</span></div>
@@ -541,7 +545,7 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       </div>
     </div>
   </section>
-  <section style="max-width: 1240px; margin: 0 auto; padding: 64px 5%; display: flex; flex-direction: column; gap: 28px;">
+  <section class="y-story-panel" data-panel="details" data-show="flex" style="display: none; padding: 0; flex-direction: column; gap: 28px;">
     <div id="details" style="display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 90px;"><span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">ACCOUNT</span><h2 style="margin: 0; font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-weight: 400; font-size: 2.4rem; line-height: 1.1;">Details &amp; sign out</h2><p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #3E3B66; max-width: 720px;">What we need to deliver to you and keep you posted. Nothing more.</p></div>
     <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start;">
       <div style="flex: 1 1 420px; min-width: 0; background: #FBF8F2; border: 1px solid #E6DECF; padding: 28px; display: flex; flex-direction: column;">
@@ -575,7 +579,9 @@ nav[aria-label="Breadcrumb"]{align-items:center}
       <a href="#" style="border: 1px solid #0B0A4E; text-decoration: none; font-size: 13px; letter-spacing: 0.16em; padding: 13px 21px;">SIGN OUT</a>
     </div>
   </section>
-  
+    </div>
+  </section>
+
 
   <footer style="background: #0B0A4E; color: #F8F4EC; padding: 0;"><div style="padding: 64px 5% 40px;">
     <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
@@ -601,6 +607,34 @@ nav[aria-label="Breadcrumb"]{align-items:center}
   </div>
     <svg viewBox="0 0 1000 165" preserveAspectRatio="none" role="img" aria-label="Y Jewelry" style="display: block; width: 100%; height: auto; margin-top: 8px; overflow: hidden;"><text x="10" y="160" textLength="980" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF" style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-size: 215px;">Y JEWELRY</text></svg>
   </footer>
+  <script>
+  window.yStoryTab = function(name){
+    var panels = document.querySelectorAll('.y-story-panel');
+    for (var i = 0; i < panels.length; i++){
+      var p = panels[i];
+      p.style.display = (p.getAttribute('data-panel') === name) ? (p.getAttribute('data-show') || 'block') : 'none';
+    }
+    var items = document.querySelectorAll('.y-story-nav-item');
+    for (var i = 0; i < items.length; i++){
+      var active = items[i].getAttribute('data-tab') === name;
+      items[i].style.background = active ? '#0B0A4E' : 'transparent';
+      items[i].style.color = active ? '#F8F4EC' : '#0B0A4E';
+    }
+    if (window.history && window.history.replaceState){
+      window.history.replaceState(null, '', '#' + name);
+    }
+    return false;
+  };
+  (function(){
+    var valid = ['pieces','complete','saved','moments','gifts','orders','points','details'];
+    function fromHash(){
+      var h = (window.location.hash || '').replace('#', '');
+      window.yStoryTab(valid.indexOf(h) > -1 ? h : 'pieces');
+    }
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+  })();
+  </script>
 </div>
 
 
