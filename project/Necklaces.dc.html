@@ -39,7 +39,8 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
  .y-filter-backdrop.y-open{display:block!important}
  .y-sidebar-spacer{display:none!important}
  .y-plp-toolbar{display:none!important}
- .y-mobile-toolbar{display:block!important}
+ .y-mobile-count{display:block!important}
+ .y-sticky-sortfilter{display:flex!important}
  .y-plp-grid{grid-template-columns:repeat(2,1fr)!important;gap:24px 14px!important}
 }
 </style>
@@ -325,15 +326,13 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
         <span style="font-size: 14px; color: #3E3B66;">3 necklaces</span>
         <label style="display: flex; gap: 8px; align-items: center; font-size: 14px; color: #3E3B66;">Sort <select style="padding: 10px; border: 1px solid #C9BFAE; background: #FBF8F2; font-family: 'Karla', sans-serif; color: #0B0A4E;"><option>Newest first</option><option>Price, low to high</option><option>Price, high to low</option></select></label>
       </div>
-      <div class="y-mobile-toolbar" style="display: none;">
-        <div style="font-size: 14px; color: #3E3B66; padding-bottom: 16px;">3 necklaces</div>
-        <div style="display: flex; border-top: 1px solid #E6DECF; border-bottom: 1px solid #E6DECF; margin-bottom: 28px;">
-          <label style="flex: 1; position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; border-right: 1px solid #E6DECF; padding: 16px 8px;">
-            <span style="font-family: 'Karla', sans-serif; font-size: 12.5px; letter-spacing: 0.12em; color: #0B0A4E;">↕ SORT</span>
-            <select aria-label="Sort" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"><option>Newest first</option><option>Price, low to high</option><option>Price, high to low</option></select>
-          </label>
-          <button type="button" class="y-filter-trigger" onclick="yFilterOpen('y-filter-necklaces')" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: transparent; border: 0; padding: 16px 8px; font-family: 'Karla', sans-serif; font-size: 12.5px; letter-spacing: 0.12em; color: #0B0A4E; cursor: pointer;">⚙ FILTER</button>
-        </div>
+      <div class="y-mobile-count" style="display: none; font-size: 14px; color: #3E3B66; padding-bottom: 16px;">3 necklaces</div>
+      <div class="y-sticky-sortfilter" style="display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: #FFFFFF; border-top: 1px solid #E6DECF; box-shadow: 0 -8px 24px rgba(11,10,78,0.08);">
+        <label style="flex: 1; position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; border-right: 1px solid #E6DECF; padding: 16px 8px;">
+          <span style="font-family: 'Karla', sans-serif; font-size: 12.5px; letter-spacing: 0.12em; color: #0B0A4E;">↕ SORT</span>
+          <select aria-label="Sort" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;"><option>Newest first</option><option>Price, low to high</option><option>Price, high to low</option></select>
+        </label>
+        <button type="button" class="y-filter-trigger" onclick="yFilterOpen('y-filter-necklaces')" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: transparent; border: 0; padding: 16px 8px; font-family: 'Karla', sans-serif; font-size: 12.5px; letter-spacing: 0.12em; color: #0B0A4E; cursor: pointer;">⚙ FILTER</button>
       </div>
       <section class="y-plp-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 48px 32px; min-width: 0;">
     <article style="display: flex; flex-direction: column; gap: 12px;">
