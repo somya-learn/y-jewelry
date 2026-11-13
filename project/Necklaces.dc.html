@@ -32,8 +32,11 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
  header{padding:0 20px!important;column-gap:8px!important}
  header nav{gap:0 8px!important}
  header .ynav-m{font-size:10.5px!important;letter-spacing:0.08em!important;padding:18px 0!important}
- div:has(> aside[aria-label^="Filter"]), section:has(> aside[aria-label^="Filter"]){flex-direction:column!important;gap:24px!important}
- aside[aria-label^="Filter"]{flex:1 1 auto!important;width:100%!important;padding-bottom:0!important}
+ .y-filter-trigger{display:inline-flex!important}
+ aside[aria-label^="Filter"]{position:fixed!important;left:0;right:0;bottom:0;top:auto;z-index:200;background:#FFFFFF;max-height:82vh;overflow-y:auto;box-shadow:0 -10px 32px rgba(11,10,78,0.18);border-radius:18px 18px 0 0;padding:20px 20px 0!important;box-sizing:border-box;flex:0 0 auto!important;width:100%!important;transform:translateY(110%);transition:transform .28s ease}
+ aside[aria-label^="Filter"].y-open{transform:translateY(0)!important}
+ .y-filter-head,.y-filter-foot{display:flex!important}
+ .y-filter-backdrop.y-open{display:block!important}
  .y-sidebar-spacer{display:none!important}
 }
 </style>
@@ -284,7 +287,12 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
   <nav aria-label="Breadcrumb" style="max-width: 1240px; margin: 0 auto; padding: 18px 5%; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; color: #5E5B86;"><a href="Main.dc.html" style="text-decoration: none; color: #5E5B86;">Home</a><span aria-hidden="true">/</span><span aria-current="page" style="color: #0B0A4E;">Necklaces</span></nav>
 
   <div style="max-width: 1240px; margin: 0 auto; padding: 32px 5% 0; display: flex; gap: 56px; align-items: flex-start;">
-    <aside aria-label="Filter necklaces" style="flex: 0 0 220px; display: flex; flex-direction: column; gap: 32px; padding-bottom: 40px;">
+    <div class="y-filter-backdrop" onclick="yFilterClose('y-filter-necklaces')" style="display:none;position:fixed;inset:0;background:rgba(11,10,78,.4);z-index:190;"></div>
+    <aside id="y-filter-necklaces" aria-label="Filter necklaces" style="flex: 0 0 220px; display: flex; flex-direction: column; gap: 32px; padding-bottom: 40px;">
+      <div class="y-filter-head" style="display:none;align-items:center;justify-content:space-between;padding-bottom:4px;">
+        <span style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-size: 1.4rem;">Filters</span>
+        <button type="button" onclick="yFilterClose('y-filter-necklaces')" aria-label="Close filters" style="background:transparent;border:0;font-size:20px;line-height:1;cursor:pointer;color:#0B0A4E;padding:4px;">✕</button>
+      </div>
       <div style="display: flex; flex-direction: column; gap: 14px;">
         <span style="font-size: 12px; letter-spacing: 0.2em; color: #C49661; font-weight: 600;">LENGTH</span>
         <div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px;">
@@ -302,11 +310,16 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
         </div>
       </div>
       <a href="SizeGuide.dc.html" style="font-size: 13px; letter-spacing: 0.14em; border-top: 1px solid #E6DECF; padding-top: 28px;">NECKLACE SIZE GUIDE →</a>
+      <div class="y-filter-foot" style="display:none;gap:12px;border-top:1px solid #E6DECF;padding:16px 0 4px;position:sticky;bottom:0;background:#FFFFFF;">
+        <button type="button" onclick="yFilterClose('y-filter-necklaces')" style="flex:1;background:transparent;border:1px solid #0B0A4E;color:#0B0A4E;padding:14px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.14em;cursor:pointer;">CLOSE</button>
+        <button type="button" onclick="yFilterClose('y-filter-necklaces')" style="flex:1;background:#0B0A4E;border:0;color:#F8F4EC;padding:14px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.14em;cursor:pointer;">APPLY</button>
+      </div>
     </aside>
 
     <div style="flex: 1 1 auto; min-width: 0;">
       <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-bottom: 24px; border-bottom: 1px solid #E6DECF; margin-bottom: 40px;">
         <span style="font-size: 14px; color: #3E3B66;">3 necklaces</span>
+        <button type="button" class="y-filter-trigger" onclick="yFilterOpen('y-filter-necklaces')" style="display:none;align-items:center;gap:8px;background:transparent;border:1px solid #0B0A4E;color:#0B0A4E;padding:10px 16px;font-family:'Karla',sans-serif;font-size:12.5px;letter-spacing:0.14em;cursor:pointer;">⚙ FILTER</button>
       </div>
       <section style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 48px 32px; min-width: 0;">
     <article style="display: flex; flex-direction: column; gap: 12px;">
@@ -435,6 +448,22 @@ a{color:#0B0A4E}a:hover{color:#3B3A7A}
   </div>
     <svg viewBox="0 0 1000 165" preserveAspectRatio="none" role="img" aria-label="Y Jewelry" style="display: block; width: 100%; height: auto; margin-top: 8px; overflow: hidden;"><text x="10" y="160" textLength="980" lengthAdjust="spacingAndGlyphs" fill="#FFFFFF" style="font-family: 'Belwe Sans', 'Cormorant Garamond', serif; font-size: 215px;">Y JEWELRY</text></svg>
   </footer>
+  <script>
+  window.yFilterOpen = function(id){
+    var panel = document.getElementById(id);
+    var backdrop = panel.previousElementSibling;
+    panel.classList.add('y-open');
+    if (backdrop && backdrop.classList.contains('y-filter-backdrop')) backdrop.classList.add('y-open');
+    document.body.style.overflow = 'hidden';
+  };
+  window.yFilterClose = function(id){
+    var panel = document.getElementById(id);
+    var backdrop = panel.previousElementSibling;
+    panel.classList.remove('y-open');
+    if (backdrop && backdrop.classList.contains('y-filter-backdrop')) backdrop.classList.remove('y-open');
+    document.body.style.overflow = '';
+  };
+  </script>
 </div>
 
 </x-dc>
